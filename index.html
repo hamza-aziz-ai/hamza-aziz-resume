@@ -111,7 +111,7 @@
 
                   <div class="about__container grid">
                      <p>
-                        AI Product Engineer with 3 years of experience in Computer Vision, Conversational/Generative AI, full-stack LLM applications, and applied MLOps. Built 4 production-grade facial recognition systems across education and enterprise sectors, reducing manual effort by 90% with &gt;99.99% accuracy via real-time pipelines and automated Milvus DB updates. Currently shipping a real-time, multi-tenant DriveThru voice ordering agent on FastAPI + Socket.IO with a LangGraph (ReAct) agent over Google Gemini, alongside earlier Rasa-based voice-to-SQL assistants. Comfortable shipping LLM applications end-to-end &mdash; FastAPI + Next.js services with retrieval-augmented, citation-grounded narrators over vLLM / OpenAI-compatible endpoints. Proficient in GPU inference (Triton, TensorRT, DeepStream) and CI/CD deployments.
+                        AI Product Engineer with 3+ years of experience in Computer Vision, Conversational/Generative AI, full-stack LLM applications, and applied MLOps. Built production face recognition attendance systems (CCTV, PTZ classroom and edge variants) covering 20+ live CCTV streams with Kafka event streaming, on TensorRT + Milvus with automated nightly gallery updates. Currently maintaining a real-time, multi-tenant DriveThru voice ordering platform on FastAPI + Socket.IO over Google Gemini (2.63 s median reply over 17,884 turns, 4 POS integrations), alongside an earlier Rasa + Gemini voice-to-SQL assistant for a college ERP. Comfortable shipping LLM applications end-to-end &mdash; FastAPI + Next.js services with rule-based and optional LLM narrators over OpenAI-compatible endpoints. Proficient in GPU inference (Triton, TensorRT, MIG) and CI/CD deployments.
                      </p>
 
                      <ul class="about__social">
@@ -346,7 +346,7 @@
                            <span>VoicePlug Inc. | Sep 2025 - Present</span>
 
                            <p>
-                              Shipping production features for a real-time, multi-tenant DriveThru voice ordering agent. Contributed to the modernization from a Rasa-based NLU platform to an agentic LangGraph + Google Gemini stack &mdash; working on entity extraction, conversation flow, and tool-use orchestration. Helped lift live client success metrics from ~25&ndash;30% to 60%+ across 4 POS integrations.
+                              Maintain and optimise a real-time, multi-tenant DriveThru voice ordering platform (FastAPI + Socket.IO, Google Gemini, Redis, MongoDB) live at 2 restaurants serving 4+ QSR brands, with a September baseline median reply of 2.63 s over 17,884 turns. Helped lift live client success metrics from ~25&ndash;30% to 60%+ through prompt and conversation-flow fixes drawn from 500+ real customer interactions; maintain 4 POS integrations; reduced recurring production issues by 6% via a replay harness and ops review loop.
                            </p>
                         </div>
                      </div>
@@ -360,7 +360,7 @@
                            <span>Global Infoventures Pvt. Ltd. | Aug 2023 - August 2025</span>
 
                            <p>
-                              Contributed to Conversational AI project for College SIM Portal; integrated Rasa, Gemini, and API for real-time data retrieval, boosting user satisfaction by 25%. Developed a Multi-Person Facial Recognition System, saving 100+ admin hours monthly
+                              Built a CCTV face recognition attendance application on InsightFace-REST (SCRFD, w600k_r50) + Milvus, achieving &gt;99.99% accuracy against the attendance register in library-gate UAT, and delivered 4 CCTV, PTZ and edge variants. Processed 20+ live CCTV streams for a main-gate deployment with ~2,000 average daily footfall; nightly staging-gallery updates raised real-world accuracy from 85% to 99%, and combined mobile + CCTV datasets improved cross-domain recognition by 14%. Built a voice-to-SQL ERP assistant (Rasa, Gemini, Milvus) with near-100% intent classification accuracy and 30%+ / 40%+ SQL precision gains.
                            </p>
                         </div>
                      </div>
@@ -374,7 +374,7 @@
                            <span>Global Infoventures Pvt. Ltd. | Feb 2023 - Jul 2023</span>
                      
                            <p>
-                              Streamlined development of Facial Recognition System; reduced data errors by 50%. Contributed to training sessions on Computer Vision projects, assisting students in leveraging YOLO for enhanced object detection.
+                              Delivered 10+ AI/ML training sessions, mentored 50+ students across CSE, AIML and Data Science, and guided 10+ YOLOv8/CNN object-detection projects through deployment.
                            </p>
                         </div>
                      </div>
@@ -395,24 +395,38 @@
                            <span>VoicePlug Inc.</span>
 
                            <p>
-                              Real-time, multi-tenant DriveThru voice ordering agent on FastAPI + Socket.IO with a LangGraph (ReAct) agent over Google Gemini 2.5-flash (with 2.0-flash fallback), Redis-backed session state, and MongoDB-backed order-event audit trail. Hardened entity extraction against ASR disfluencies, added combo/multi-size guard logic, and integrated 4 POS providers (QUBeyond, Clover, Speedline, Deliverect) with Jinja2-templated per-restaurant prompts.
+                              Real-time voice agent that takes DriveThru orders and files them into the POS across multiple QSR brands. On FastAPI + Socket.IO, Gemini 2.5 Flash-Lite extracts menu items, an order agent replies from a cached menu-aware prompt, and a second model turns spoken confirmations into Redis cart operations. Deterministic guardrails make it safe to bill on: required-choice and per-item limits, a final cart check, and staff handoff after repeated failures, validated against replays of real calls. Live at 2 restaurants with a 2.63 s median reply over 17,884 turns; MongoDB records, Jinja2 per-brand prompts, 4 POS integrations.
                            </p>
                         </div>
                      </div>
 
                      <div>
                         <h2 class="resume__title">
-                           <i class="ri-arrow-drop-right-line"></i> HalalLens &mdash; Halal Investment Research Copilot
+                           <i class="ri-arrow-drop-right-line"></i> HalalLens &mdash; Shariah-Compliance Research Platform
+                        </h2>
+
+                        <div class="resume__data">
+                           <span>Personal Project</span>
+
+                           <p>
+                              Built a FastAPI (34 endpoints) + Next.js 14/TypeScript + PostgreSQL platform that screens Indian equities on five AAOIFI-inspired ratios (debt, cash, non-permissible income, receivables, liquid assets). Added a rule-based &ldquo;Explain Why&rdquo; narrator with an optional OpenAI-compatible LLM mode and automatic fallback. Dockerised ingestion and evaluation workers crawl BSE announcements, parse PDF/XBRL financials, and refresh verdicts on a schedule. Hardened auth (PBKDF2, hashed sessions, rate limiting), Razorpay billing, GitHub Actions CI.
+                           </p>
+                        </div>
+                     </div>
+
+                     <div>
+                        <h2 class="resume__title">
+                           <i class="ri-arrow-drop-right-line"></i> Codex&ndash;Claude Council
                         </h2>
 
                         <div class="resume__data">
                            <span>Open-Source / Personal Project</span>
 
                            <p>
-                              Full-stack Shariah-compliance research platform for Indian equities &mdash; FastAPI (33 endpoints), Next.js 14 + TypeScript, PostgreSQL, Docker, GitHub Actions CI. Built an AAOIFI-style ratio engine across 5 compliance screens and a dual-mode &ldquo;Explain Why&rdquo; narrator (rule-based + vLLM / OpenAI-compatible LLM, citation-grounded). In-process workers crawl BSE &amp; NSE announcements, extract financials from PDF/XBRL, and refresh compliance verdicts on a schedule.
+                              Open-source MCP server and plugin (Claude Code, Codex, Claude Desktop, ChatGPT app) that has ChatGPT (via the Codex CLI) and Claude (via Claude Code) answer a question independently, then debate in lock-step rounds until both agree; one writes the final answer, the other verifies it. Zero-dependency Node.js; 8 MCP tools with output schemas; remote sessions over SSH; 100 automated tests on Windows/macOS/Linux CI; tokenless OIDC releases to npm, MCP Registry and Smithery.
                            </p>
 
-                           <a href="https://github.com/hamza-aziz-ai/HalalLens" target="_blank" class="resume__button-link">
+                           <a href="https://github.com/hamza-aziz-ai/codex-claude-council" target="_blank" class="resume__button-link">
                               View <i class="ri-external-link-line"></i>
                            </a>
                         </div>
@@ -420,56 +434,42 @@
 
                      <div>
                         <h2 class="resume__title">
-                           <i class="ri-arrow-drop-right-line"></i> G6 Voice Assistant (Conversational AI for College ERP)
+                           <i class="ri-arrow-drop-right-line"></i> Voice Assistant for College ERP (Natural Language to SQL)
                         </h2>
-               
+
                         <div class="resume__data">
                            <span>Global InfoVentures Pvt. Ltd.</span>
-               
+
                            <p>
-                              Developed a Conversational AI system for Global InfoVentures Pvt. Ltd., enabling voice and text-based queries to retrieve real-time data from the SIM Portal. The project was integrated with the G5 Portal to enhance user interaction across platforms.
+                              Built a voice and text query assistant that answers natural-language questions over a multi-institute college ERP. A FastAPI backend transcribes speech via Google Speech-to-Text, routes queries to student, fee, employee or library modules with two Rasa DIET classifiers, and asks a clarifying question when confidence is low. Schema fields (100+ field-level mappings per module) and few-shot examples are retrieved from Milvus using MiniLM embeddings, improving SQL precision by 30%+, with vector-based field/value disambiguation adding 40%+. Gemini generates SQL for the ERP to execute and summarizes results into gTTS speech; near-100% intent classification accuracy.
                            </p>
                         </div>
                      </div>
 
                      <div>
                         <h2 class="resume__title">
-                           <i class="ri-arrow-drop-right-line"></i> CCTV-Based Face Attendance System
+                           <i class="ri-arrow-drop-right-line"></i> CCTV Face Recognition Attendance System
                         </h2>
 
                         <div class="resume__data">
                            <span>Global InfoVentures Pvt. Ltd.</span>
 
                            <p>
-                              Launched on NVIDIA DGX A100, orchestrating 20+ live CCTV streams with TensorRT-optimized SCRFD (scrfd_10g_gnkps) and w600k_r50 models. Pioneered dual dataset staging (mobile &amp; CCTV) over Milvus Vector DB to mitigate domain shift, achieving &gt;99.99% face recognition accuracy across varied environments. Architected a CI/CD-style data pipeline that extracts faces from elevated-angle surveillance cameras, filters best-quality faces per person, and auto-updates the vector database &mdash; improving recognition rates by 25% in practical deployment.
+                              Real-time attendance across 20+ live CCTV streams on an NVIDIA DGX A100 using MIG partitions; &gt;99.99% accuracy against the attendance register in library-gate UAT. RTSP streams are batched into InsightFace-REST, which serves TensorRT SCRFD (scrfd_10g_gnkps) detection and w600k_r50 recognition as two replicas on separate MIG slices behind nginx. Dual Milvus collections pair the enrolled gallery with a CCTV-captured staging gallery to counter domain shift. A collector keeps each person's best faces, ranked by pupil distance and match score, and a nightly job refreshes the vector DB, raising real-world accuracy from 85% to 99%. Also: PostgreSQL, FastAPI, Kafka feedback, DVC-versioned datasets.
                            </p>
                         </div>
                      </div>
 
                      <div>
                         <h2 class="resume__title">
-                           <i class="ri-arrow-drop-right-line"></i> PTZ-Classroom Attendance System
+                           <i class="ri-arrow-drop-right-line"></i> PTZ Classroom Attendance System
                         </h2>
 
                         <div class="resume__data">
                            <span>Global InfoVentures Pvt. Ltd.</span>
 
                            <p>
-                              Automated classroom attendance by deploying rotating PTZ cameras integrated with the face recognition pipeline &mdash; eliminating manual roll calls and reducing proxy attendance by 25%.
-                           </p>
-                        </div>
-                     </div>
-
-                     <div>
-                        <h2 class="resume__title">
-                           <i class="ri-arrow-drop-right-line"></i> Edge-Based Office Attendance System
-                        </h2>
-
-                        <div class="resume__data">
-                           <span>Global InfoVentures Pvt. Ltd.</span>
-
-                           <p>
-                              Commissioned a Jetson Orin Nano for real-time on-device inference using DeepStream SDK, a Raspberry Pi AI camera, and proximity sensors. Eliminated manual attendance logging and replaced legacy biometric systems with 100% contactless AI-driven tracking, enhancing hygiene and operational efficiency in office setups.
+                              Built a Dockerised attendance system in which one PTZ camera per classroom sweeps up to 23 ONVIF presets over RTSP, with dedicated faculty captures at lecture start and end. Frames go to a TensorRT-backed InsightFace-REST service for embeddings, and identities are matched by vector search in Milvus. A YOLOv9 service estimates headcount. FastAPI services write lecture-wise attendance into year-partitioned PostgreSQL tables. An APScheduler job syncs attendance to the institute ERP every 5 minutes, across 8 lecture slots per day.
                            </p>
                         </div>
                      </div>
